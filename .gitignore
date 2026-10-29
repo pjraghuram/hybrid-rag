@@ -1,0 +1,15 @@
+# secrets
+.env
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# data + generated artifacts (rebuild with the numbered scripts)
+data/pdfs/
+data/processed/
+indexes/
+
+# editor / OS
+.DS_Store

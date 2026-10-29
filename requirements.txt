@@ -1,0 +1,10 @@
+python-dotenv
+pypdf
+langchain
+langchain-text-splitters
+langchain-groq
+streamlit
+sentence-transformers
+pydantic
+bm25s
+cohere

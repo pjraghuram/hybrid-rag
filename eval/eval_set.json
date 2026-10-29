@@ -1,0 +1,247 @@
+[
+  {
+    "question": "Which parts of the ICH guideline cover the materials used in packaging, the way labels are issued and managed, and the processes for packaging and labeling operations?",
+    "correct_chunk_id": 2645,
+    "source": "Q7.pdf"
+  },
+  {
+    "question": "What steps can be taken to understand how analytical procedure parameters influence performance and enable wider operating ranges in the lifecycle of a procedure?",
+    "correct_chunk_id": 462,
+    "source": "Q14.pdf"
+  },
+  {
+    "question": "When submitting a drug application, what details should I give to explain my choice of starting materials for a synthetic drug?",
+    "correct_chunk_id": 102,
+    "source": "Q11.pdf"
+  },
+  {
+    "question": "What should be included in a stability protocol for viral banks, and on what basis should the test parameters and acceptance criteria be justified?",
+    "correct_chunk_id": 1139,
+    "source": "Q1EWG.pdf"
+  },
+  {
+    "question": "What does a full design stability protocol require for drug substances and drug products?",
+    "correct_chunk_id": 1015,
+    "source": "Q1EWG.pdf"
+  },
+  {
+    "question": "If a company doesn\u2019t have data from older batches at the time it files its stability dossier, what must it include in the regulatory submission?",
+    "correct_chunk_id": 925,
+    "source": "Q1EWG.pdf"
+  },
+  {
+    "question": "Which step of the ICH process involves recommending the final draft of Q1A for adoption by the European Union, Japan, and the United States?",
+    "correct_chunk_id": 578,
+    "source": "Q1A(R2) Guideline.pdf"
+  },
+  {
+    "question": "Where should the continuous filtration step of an integrated drug substance and product process be described in the CTD?",
+    "correct_chunk_id": 424,
+    "source": "Q13.pdf"
+  },
+  {
+    "question": "When does bioburden become considered contamination according to the ICH guideline?",
+    "correct_chunk_id": 2797,
+    "source": "Q7.pdf"
+  },
+  {
+    "question": "When can you skip testing at different relative humidities during stability studies for biotechnological products?",
+    "correct_chunk_id": 2256,
+    "source": "Q5C .pdf"
+  },
+  {
+    "question": "What information must be documented to ensure the correct application of process models for controlling critical process parameters and to keep them within the desired ranges, including contingency plans if the model is unavailable?",
+    "correct_chunk_id": 360,
+    "source": "Q13.pdf"
+  },
+  {
+    "question": "When should a new drug substance\u2019s particle size distribution be measured?",
+    "correct_chunk_id": 2443,
+    "source": "Q6A .pdf"
+  },
+  {
+    "question": "What BMDL10 value did the Joint Expert Committee for Food Additives assign to HgCl\u2082?",
+    "correct_chunk_id": 1746,
+    "source": "Q3D(R2).pdf"
+  },
+  {
+    "question": "What is the maximum allowed level of hydrolysis impurity in intermediate\u202fF?",
+    "correct_chunk_id": 130,
+    "source": "Q11.pdf"
+  },
+  {
+    "question": "Which sections of a pharmaceutical application should contain details about the design space for the manufacturing process?",
+    "correct_chunk_id": 122,
+    "source": "Q11.pdf"
+  },
+  {
+    "question": "What method is used to assess how equipment design and operation affect process dynamics?",
+    "correct_chunk_id": 388,
+    "source": "Q13.pdf"
+  },
+  {
+    "question": "What must be done if the temperature and humidity conditions used during holding\u2011time studies differ from the storage conditions described in Section\u00a07 of the guideline?",
+    "correct_chunk_id": 906,
+    "source": "Q1EWG.pdf"
+  },
+  {
+    "question": "What limits are set on extending the re\u2011test period or shelf life beyond the long\u2011term data for drugs stored at room temperature compared to those stored refrigerated?",
+    "correct_chunk_id": 964,
+    "source": "Q1EWG.pdf"
+  },
+  {
+    "question": "If no retrovirus\u2011like particles are detected and the PERT assay is negative, do we still need to estimate how many retroviral particles are in each dose?",
+    "correct_chunk_id": 2091,
+    "source": "Q5A(R2).pdf"
+  },
+  {
+    "question": "What is a new drug substance?",
+    "correct_chunk_id": 2490,
+    "source": "Q6A .pdf"
+  },
+  {
+    "question": "Why might a control strategy for drug substance manufacturing need to be revised multiple times during the product lifecycle?",
+    "correct_chunk_id": 108,
+    "source": "Q11.pdf"
+  },
+  {
+    "question": "When qualifying primary cell substrates for production, what testing methods are recommended to confirm they are free of adventitious agents?",
+    "correct_chunk_id": 2321,
+    "source": "Q5D.pdf"
+  },
+  {
+    "question": "When a re\u2011test period or shelf life is being established or confirmed, what information must be included in the stability protocol summary for regulatory submission?",
+    "correct_chunk_id": 824,
+    "source": "Q1EWG.pdf"
+  },
+  {
+    "question": "What kinds of events should prompt a review of the risk\u2011management process?",
+    "correct_chunk_id": 2959,
+    "source": "Q9(R1).pdf"
+  },
+  {
+    "question": "What cleaning steps should be taken to prevent carry\u2011over contamination when the same equipment is used for multiple batches of an API?",
+    "correct_chunk_id": 2687,
+    "source": "Q7.pdf"
+  },
+  {
+    "question": "Can a design space be used to justify changing manufacturing sites?",
+    "correct_chunk_id": 2899,
+    "source": "Q8:Q9:Q10_QAs.pdf"
+  },
+  {
+    "question": "Which physical and chemical characteristics of a biotechnological or biological drug product should be monitored during stability testing?",
+    "correct_chunk_id": 2255,
+    "source": "Q5C .pdf"
+  },
+  {
+    "question": "What is the acceptable daily exposure for lead when taken orally, injected, or inhaled according to the ICH Q3D(R2) guideline?",
+    "correct_chunk_id": 1736,
+    "source": "Q3D(R2).pdf"
+  },
+  {
+    "question": "How can the adequacy of a holding time be justified if analytical methods cannot be applied to an intermediate?",
+    "correct_chunk_id": 913,
+    "source": "Q1EWG.pdf"
+  },
+  {
+    "question": "If an EI has a CBA of less than 1\u202f%, how do you calculate its cutaneous PDE?",
+    "correct_chunk_id": 1857,
+    "source": "Q3D(R2).pdf"
+  },
+  {
+    "question": "Why can\u2019t a new drug substance be identified based only on a single chromatographic retention time?",
+    "correct_chunk_id": 2438,
+    "source": "Q6A .pdf"
+  },
+  {
+    "question": "What does a stability testing program aim to show about the quality of an API or finished pharmaceutical product over time?",
+    "correct_chunk_id": 1152,
+    "source": "Q1F.pdf"
+  },
+  {
+    "question": "What quality\u2011related steps should a company take when it outsources the supply of materials?",
+    "correct_chunk_id": 26,
+    "source": "Q10.pdf"
+  },
+  {
+    "question": "What minimum illumination level and ultraviolet energy must be used during confirmatory photostability studies, and how can the exposure be verified?",
+    "correct_chunk_id": 661,
+    "source": "Q1B Guideline.pdf"
+  },
+  {
+    "question": "When defining a design space from overlapping successful operating ranges for several CQAs, can the applicant choose to use only part of that overlapping region?",
+    "correct_chunk_id": 2885,
+    "source": "Q8(R2).pdf"
+  },
+  {
+    "question": "What is the permitted daily exposure (PDE) for a 50\u2011kg person as calculated in the excerpt?",
+    "correct_chunk_id": 1749,
+    "source": "Q3D(R2).pdf"
+  },
+  {
+    "question": "What are the percentage limits for reporting, identifying, and qualifying an impurity in a drug with a 0.5\u202fg maximum daily dose?",
+    "correct_chunk_id": 1409,
+    "source": "Q3A(R2).pdf"
+  },
+  {
+    "question": "Are the WHO guidelines for prequalification also relevant for products that are already on the market?",
+    "correct_chunk_id": 1151,
+    "source": "Q1F.pdf"
+  },
+  {
+    "question": "For a drug product, how many of the three primary batches must be at least a pilot\u2011scale batch?",
+    "correct_chunk_id": 644,
+    "source": "Q1A(R2) Guideline.pdf"
+  },
+  {
+    "question": "When can I consider the photostability testing of a drug substance or product finished?",
+    "correct_chunk_id": 891,
+    "source": "Q1EWG.pdf"
+  },
+  {
+    "question": "If a test applies to both the drug substance and the drug product, can it be performed only once and the result used for both?",
+    "correct_chunk_id": 423,
+    "source": "Q13.pdf"
+  },
+  {
+    "question": "How was the increase in batch size and the change in run time communicated to regulators?",
+    "correct_chunk_id": 384,
+    "source": "Q13.pdf"
+  },
+  {
+    "question": "What amounts of tert\u2011butyl alcohol were given to mice in the in\u2011vivo studies that did not result in a rise in micronucleated erythrocytes?",
+    "correct_chunk_id": 1573,
+    "source": "Q3C(R9).pdf"
+  },
+  {
+    "question": "What should a continuous manufacturing process do if a filter fails?",
+    "correct_chunk_id": 401,
+    "source": "Q13.pdf"
+  },
+  {
+    "question": "Which Class\u202f1 solvents are listed in Table\u202f1, and what are their maximum concentration limits in pharmaceutical products?",
+    "correct_chunk_id": 1487,
+    "source": "Q3C(R9).pdf"
+  },
+  {
+    "question": "What evidence must a registration application provide to confirm that analytical methods are validated for detecting and quantifying degradation products?",
+    "correct_chunk_id": 1425,
+    "source": "Q3B(R2).pdf"
+  },
+  {
+    "question": "When was the current Step\u202f4 version of the ICH\u202fQ6B guideline published?",
+    "correct_chunk_id": 2497,
+    "source": "Q6B.pdf"
+  },
+  {
+    "question": "What are the two main categories of enhanced stability models used for solid synthetic chemical drug substances or products?",
+    "correct_chunk_id": 1096,
+    "source": "Q1EWG.pdf"
+  },
+  {
+    "question": "What percentage of a mutagenic impurity in a drug substance indicates that it will affect the impurity profile?",
+    "correct_chunk_id": 178,
+    "source": "Q11_Q&As.pdf"
+  }
+]
