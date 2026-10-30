@@ -26,13 +26,28 @@ model = SentenceTransformer("all-mpnet-base-v2")
 if EMB_FILE.exists():
     print("Embeddings already exist, loading from disk.")
     doc_embeddings = np.load(EMB_FILE)
+
+    # --- STALE-EMBEDDING GUARD ---
+    # The .npy has one vector per chunk. If the chunk count no longer matches,
+    # the saved embeddings are from an OLD chunking and every dense result would
+    # silently point at the wrong text. Fail loudly instead.
+    if len(doc_embeddings) != len(texts):
+        raise ValueError(
+            f"\nSTALE EMBEDDINGS DETECTED:\n"
+            f"  saved embeddings : {len(doc_embeddings)} vectors\n"
+            f"  current chunks   : {len(texts)} chunks\n"
+            f"These don't match -- the .npy is from a different chunking.\n"
+            f"Fix: delete '{EMB_FILE}' and re-run this script to re-embed.\n"
+        )
+    print(f"OK: {len(doc_embeddings)} embeddings match {len(texts)} chunks.")
+
 else:
     print("Embedding all chunks... (this is the slow part, be patient)")
     doc_embeddings = model.encode(
         texts,
         batch_size=32,
-        show_progress_bar=True,  # you'll see a progress bar so you know it's working
-        convert_to_numpy=True,  # we want a NumPy array to save
+        show_progress_bar=True,
+        convert_to_numpy=True,
     )
     EMB_FILE.parent.mkdir(parents=True, exist_ok=True)
     np.save(EMB_FILE, doc_embeddings)

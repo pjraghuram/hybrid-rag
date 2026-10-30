@@ -1,78 +1,13 @@
-"""
-Step 8: Answer generation (the 'G' in RAG). Take a user question, retrieve the
-best chunks with our hybrid+rerank pipeline, and have the LLM answer using ONLY
-those chunks -- citing which ICH guideline each fact came from.
-"""
-
-import os
-import time
-import json
-from pathlib import Path
-import numpy as np
-import bm25s
-import cohere
-from dotenv import load_dotenv
-from sentence_transformers import SentenceTransformer
+from retrieval import chunks, search_hybrid_rerank
 from langchain_groq import ChatGroq
 
-load_dotenv()
-co = cohere.Client(os.getenv("COHERE_API_KEY"))
-
-# ---------- load everything once ----------
-with open("data/processed/chunks.json", "r", encoding="utf-8") as f:
-    chunks = json.load(f)
-
-bm25 = bm25s.BM25.load("indexes/bm25", load_corpus=False)
-model = SentenceTransformer("all-mpnet-base-v2")
-doc_embeddings = np.load("indexes/dense_embeddings.npy")
 llm = ChatGroq(model="openai/gpt-oss-20b")
-
-
-def normalize(vecs):
-    return vecs / np.linalg.norm(vecs, axis=1, keepdims=True)
-
-
-doc_norm = normalize(doc_embeddings)
-
-
-# ---------- retrieval (hybrid + rerank, the best method from Step 7) ----------
-def search_bm25(query, k):
-    q_tokens = bm25s.tokenize(query, stopwords="en")
-    results, _ = bm25.retrieve(q_tokens, k=k)
-    return list(results[0])
-
-
-def search_dense(query, k):
-    q_vec = model.encode([query], convert_to_numpy=True)
-    q_norm = normalize(q_vec)[0]
-    scores = doc_norm @ q_norm
-    return list(np.argsort(-scores)[:k])
-
-
-def reciprocal_rank_fusion(rankings, k=60):
-    scores = {}
-    for ranking in rankings:
-        for rank, doc_id in enumerate(ranking, start=1):
-            scores[doc_id] = scores.get(doc_id, 0) + 1 / (k + rank)
-    return [doc_id for doc_id, _ in sorted(scores.items(), key=lambda x: -x[1])]
-
-
-def retrieve(query, k=5, candidates=50):
-    """Our best pipeline: hybrid (RRF) -> rerank -> top k chunks."""
-    candidate_ids = reciprocal_rank_fusion(
-        [search_bm25(query, candidates), search_dense(query, candidates)]
-    )[:candidates]
-    texts = [chunks[i]["text"] for i in candidate_ids]
-    reranked = co.rerank(
-        model="rerank-english-v3.0", query=query, documents=texts, top_n=k
-    )
-    return [candidate_ids[r.index] for r in reranked.results]
 
 
 # ---------- the NEW part: answer generation with citations ----------
 def answer_question(query, k=5):
     # 1. retrieve the best chunks
-    chunk_ids = retrieve(query, k=k)
+    chunk_ids = search_hybrid_rerank(query, k=k)
     retrieved = [chunks[i] for i in chunk_ids]
 
     # 2. build a context block where each chunk is labeled with its source
